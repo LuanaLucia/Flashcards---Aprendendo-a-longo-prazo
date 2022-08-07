@@ -6,18 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards - Aprendendo a longo prazo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="desktop-wrapper">
-    <ul class="menuhorizontal">
-        <li><a href="../posicionamento/p3.html">Olá, Luana</a></li>
-        <li><a href="#">Reforçar</a></li>
-        <li><a href="#">Novo Card</a></li>
-        <li><a href="#">Desemprenho</a></li>
-        <li><a href="#">Anotações</a></li>
-        </ul>
+    <nav class="nav">
+        <div class="container">
+            
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">Praticar</a></li>
+                    <li><a href="#">Novo Card</a></li>
+                    <li><a href="#">Desempenho</a></li>
+                    <li><a href="#howWorks">Como Funciona</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
     </nav>
-    
+
+    <section class="home">
+        <div class="container-Typing">
+            <h1><a href="#" class="author title">Flashcard</a></h1>
+            <h2><span class="txt-type subtitle" data-wait="2500"></span></h2>
+        </div>
+    </section>
+    <section id="howWorks">
+    <div style="height: 1000px"><br><br><br>
+			<h2 class="myH2">Como funciona ?</h2>
+			<p class="myP">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam officiis sint dolor nobis qui voluptas fugiat similique aperiam consectetur libero deleniti, nulla, sapiente, iste earum corporis facilis itaque minus ea illum atque. Harum rerum, illum corrupti quae voluptatem omnis repellat, temporibus iure, velit molestiae odit corporis excepturi debitis cumque! Numquam dolore eum, omnis corporis itaque, cum voluptates sequi maiores laudantium nobis unde porro labore suscipit. Quis cupiditate saepe sequi, recusandae adipisci at consequuntur aut dolor doloribus reprehenderit, quia excepturi omnis vel minus nisi delectus aliquid non suscipit sed ullam? Earum tempore, pariatur consequatur nostrum exercitationem sint illum cum quos officiis voluptatum vitae dolor ratione vero quae doloremque dolore facilis possimus et debitis officia deserunt sequi quisquam? Illo dolores maiores eveniet est eius ducimus ratione veritatis provident, excepturi corporis suscipit. Numquam tempore non quaerat iure qui debitis, maxime explicabo adipisci enim officia itaque voluptatibus, perspiciatis, a accusantium eos porro facilis.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugit sequi quasi doloremque, repudiandae corporis adipisci nam consequuntur necessitatibus recusandae minima nemo explicabo repellendus, blanditiis facere? Mollitia, incidunt quidem sunt aliquid ratione provident atque ab obcaecati a suscipit molestiae eaque ipsum distinctio maxime, laborum asperiores, quia autem deserunt. Voluptates quas, impedit labore dolore aut consectetur quasi dolorum veritatis voluptatum. Officiis vel ipsa inventore excepturi quia. Omnis dolorem voluptate accusantium dicta aspernatur molestiae porro veritatis quasi accusamus nulla eum minima velit, hic eligendi iste cumque, maxime, optio laboriosam. Repellendus, explicabo corporis aperiam voluptas sapiente maiores deleniti reprehenderit nisi doloremque. Explicabo, vel.<br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odit molestiae aut voluptatem magni magnam voluptate eveniet aliquid quam, maxime praesentium mollitia atque sint possimus ut, neque quia doloremque impedit natus. Facilis repellat reprehenderit consectetur nam explicabo, culpa et atque amet asperiores eligendi cupiditate praesentium voluptates suscipit incidunt. Voluptate, explicabo.
+			</p>
+    </div>
+</section>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="TypeScript.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
 </body>
 </html>
